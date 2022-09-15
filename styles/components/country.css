@@ -1,0 +1,19 @@
+.country__btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease-in-out;
+}
+
+.country__btn:hover,
+.country__btn:focus {
+  color: #0017e6;
+}
+
+.country__btn:active {
+  color: #8793ff;
+}
+
+.country__list {
+  display: none;
+}

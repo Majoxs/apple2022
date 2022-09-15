@@ -6,15 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ProApple - товары Apple</title>
 
+  <link rel="preload" href="fonts/SFUIDisplay-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/SFUIDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/SFUIDisplay-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="img/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="img/faviconApple.png" type="image/png">
 
+  <link rel="stylesheet" href="lib/swiper-bundle.min.css">
   <link rel="stylesheet" href="styles/index.css">
+
+  <script src="scripts/index.js" type="module"></script>
 </head>
 <body>
+
   <header class="header">
-    <div class="container">
+    <div class="container header__container">
       <img class="header__logo" src="img/logo.svg" alt="Логотип ProApple">
       <nav class="header__navigation navigation">
         <ul class="navigation__list">
@@ -27,7 +35,12 @@
         </ul>
       </nav>
       <div class="header__country country">
-        <button class="country__btn">Страна</button>
+        <button class="country__btn">
+          <span>Страна</span>
+          <svg width="9" height="6">
+            <use href="#arrow-down" />
+          </svg>
+        </button>
         <ul class="country__list">
           <li class="country__item">
             <button class="country__btn">Russia, RUB</button>
@@ -46,7 +59,7 @@
     </div>
   </header>
 
-  <main>
+   <main>
 
     <section class="hero">
       <div class="container">
@@ -72,61 +85,121 @@
       </div>
     </section>
 
-    <section class="goods" id="goods">
+     <section class="goods" id="goods">
       <div class="container">
         <p class="goods__tagline">Вы ждали этого</p>
         <h2 class="goods__title">Все продукты новой линейки</h2>
-        <div class="goods__block">
-          <ul class="goods__list">
-            <li class="goods__item">
-              <article class="goods__product product">
-                <div class="product__image-wrapper">
-                  <img class="product__image" src="img/iPhone14-pro.png" alt="iPhone14-pro">
-                </div>
-                <div class="product__info">
-                  <h3 class="product__title">iPhone 14 PRO</h3>
-                  <p class="product__price">$1050</p>
-                </div>
-                <button class="product__more">Узнать больше</button>
-              </article>
-            </li>
-            <li class="goods__item">
-              <article class="goods__product product">
-                <div class="product__image-wrapper">
-                  <img class="product__image" src="img/iPhone14.png" alt="iPhone14">
-                </div>
-                <div class="product__info">
-                  <h3 class="product__title">iPhone 14</h3>
-                  <p class="product__price">$799</p>
-                </div>
-                <button class="product__more">Узнать больше</button>
-              </article>
-            </li>
-            <li class="goods__item">
-              <article class="goods__product product">
-                <div class="product__image-wrapper">
-                  <img class="product__image" src="img/AirPodsPro.png" alt="AirPodsPro">
-                </div>
-                <div class="product__info">
-                  <h3 class="product__title">AirPods Pro</h3>
-                  <p class="product__price">$249</p>
-                </div>
-                <button class="product__more">Узнать больше</button>
-              </article>
-            </li>
-          </ul>
+
+        <div class="goods__helper">
+          <div class="goods__block swiper">
+            <ul class="goods__list swiper-wrapper">
+
+              <li class="goods__item swiper-slide">
+                <article class="goods__product product">
+                  <div class="product__image-wrapper">
+                    <img class="product__image" src="img/iPhone14-pro.png" alt="iPhone14-pro" width="200" height="200">
+                  </div>
+                  <div class="product__info">
+                    <h3 class="product__title">iPhone 14 PRO</h3>
+                    <p class="product__price">$1050</p>
+                  </div>
+                  <button class="product__more">
+                    <span>Узнать больше</span>
+                    <svg width="13" height="8">
+                      <use href="#arrow-more" />
+                    </svg>
+                  </button>
+                </article>
+              </li>
+
+              <li class="goods__item swiper-slide">
+                <article class="goods__product product">
+                  <div class="product__image-wrapper">
+                    <img class="product__image" src="img/iPhone14.png" alt="iPhone14" width="200" height="200">
+                  </div>
+                  <div class="product__info">
+                    <h3 class="product__title">iPhone 14</h3>
+                    <p class="product__price">$799</p>
+                  </div>
+                  <button class="product__more">
+                    <span>Узнать больше</span>
+                    <svg width="13" height="8">
+                      <use href="#arrow-more" />
+                    </svg>
+                  </button>
+                </article>
+              </li>
+
+              <li class="goods__item swiper-slide">
+                <article class="goods__product product">
+                  <div class="product__image-wrapper">
+                    <img class="product__image" src="img/AirPodsPro.png" alt="AirPodsPro" width="200" height="200">
+                  </div>
+                  <div class="product__info">
+                    <h3 class="product__title">AirPods Pro</h3>
+                    <p class="product__price">$249</p>
+                  </div>
+                  <button class="product__more">
+                    <span>Узнать больше</span>
+                    <svg width="13" height="8">
+                      <use href="#arrow-more" />
+                    </svg>
+                  </button>
+                </article>
+              </li>
+
+              <li class="goods__item swiper-slide">
+                <article class="goods__product product">
+                  <div class="product__image-wrapper">
+                    <img class="product__image" src="img/apple_watch_ultra.png" alt="Apple Watch Ultra" width="200" height="200">
+                  </div>
+                  <div class="product__info">
+                    <h3 class="product__title">Apple Watch Ultra</h3>
+                    <p class="product__price">$799</p>
+                  </div>
+                  <button class="product__more">
+                    <span>Узнать больше</span>
+                    <svg width="13" height="8">
+                      <use href="#arrow-more" />
+                    </svg>
+                  </button>
+                </article>
+              </li>
+
+              <li class="goods__item swiper-slide">
+                <article class="goods__product product">
+                  <div class="product__image-wrapper">
+                    <img class="product__image" src="img/apple-watch-series-8.png" alt="Apple Watch Series 8" width="200" height="200">
+                  </div>
+                  <div class="product__info">
+                    <h3 class="product__title">Apple Watch Series 8</h3>
+                    <p class="product__price">$399</p>
+                  </div>
+                  <button class="product__more">
+                    <span>Узнать больше</span>
+                    <svg width="13" height="8">
+                      <use href="#arrow-more" />
+                    </svg>
+                  </button>
+                </article>
+              </li>
+            </ul>
+          </div>
           <button class="goods__arrow goods__arrow--prev"></button>
           <button class="goods__arrow goods__arrow--next"></button>
         </div>
+
       </div>
-    </section>
+    </section> 
 
     <section class="features" id="features">
       <div class="container">
         <p class="features__tagline">Мы становимся лучше. Для вас</p>
-        <h2 class="features__title">Характеристики iPhone 14</h2>
+        <h2 class="features__title">Характеристики iPhone&nbsp;14</h2>
         <div class="features__wrapper">
+          
           <img class="features__image" src="img/iPhone.png" alt="iPhone">
+          
           <ul class="features__list">
             <li class="features__item">
               <span class="features__item-title">вес</span>
@@ -152,10 +225,10 @@
   
   <footer class="footer">
     <div class="container">
-      <div class="footer__top">
+      <div class="footer__content">
         <img class="footer__logo" src="img/logo-white.svg" alt="Логотип ProApple">
-        <nav class="footer__navigation navigation">
-          <ul class="navigation__list">
+        <div class="footer__navigation navigation">
+          <ul class="navigation__list navigation__list--column-mob">
             <li class="navigation__item">
               <a class="navigation__link" href="#goods">Продукты</a>
             </li>
@@ -163,10 +236,22 @@
               <a class="navigation__link" href="#features">Характеристики</a>
             </li>
           </ul>
-        </nav>
+        </div>
       </div>
-      <p class="footer__copy">Copyright © 2022 ProApple</p>
+      <p class="footer__copyright">Copyright © 2022 ProApple</p>
     </div>
   </footer>
+  
+  <svg style="display: none">
+    <symbol id="arrow-more" width="13" height="8" viewbox="0 0 13 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12.3536 4.35355C12.5488 4.15829 12.5488 3.84171 12.3536 3.64645L9.17157 0.464466C8.97631 0.269204 8.65973 0.269204 8.46447 0.464466C8.2692 0.659728 8.2692 0.976311 8.46447 1.17157L11.2929 4L8.46447 6.82843C8.2692 7.02369 8.2692 7.34027 8.46447 7.53553C8.65973 7.7308 8.97631 7.7308 9.17157 7.53553L12.3536 4.35355ZM0 4.5H12V3.5H0L0 4.5Z" />
+    </symbol>
+
+    <symbol id="arrow-down" width="9" height="5" viewbox="0 0 9 5" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4.5 5L8.39711 0.5H0.602886L4.5 5Z" />
+    </symbol>
+  </svg>
+
+
 </body>
 </html>
