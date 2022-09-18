@@ -1,3 +1,11 @@
+:root {
+  --color-basic: #000;
+  --color-basic-w: #fff;
+  --color-hover: #2238ff;
+  --color-focus: #0017e5;
+  --color-active: #8793ff;
+}
+
 html {
   box-sizing: border-box;
 }

@@ -37,13 +37,29 @@
 }
 
 .form__submit {
-  background-color: #2238FF;
+  background-color: var(--color-hover);
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
+  border: 1px solid transparent;
   font-size: 16px;
-  color: #fff;
+  color: var(--color-basic-w);
   height: 46px;
   width: 225px;
+  transition-property: border-color, background-color, color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.form__submit:hover,
+.form__submit:focus {
+  border-color: var(--color-hover);
+  background-color: var(--color-basic-w);
+  color: var(--color-basic);
+}
+
+.form__submit:active {
+  background-color: var(--color-active);
+  color: var(--color-basic-w);
 }
 
 @media (min-width: 1024px) {
