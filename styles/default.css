@@ -1,3 +1,11 @@
+:root {
+  --color-basic: #000;
+  --color-basic-w: #fff;
+  --color-hover: #2238ff;
+  --color-focus: #0017e5;
+  --color-active: #8793ff;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -10,7 +18,7 @@ html {
 
 body {
   min-width: 320px;
-  font-family:'SF UI Display', sans-serif;
+  font-family: 'SF UI Display', sans-serif;
   font-size: 16px;
   font-weight: 400;
 }
@@ -44,7 +52,19 @@ h1, h2, h3, p {
 }
 
 .container {
-  max-width: 1230px;
+  max-width: 1324px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 34px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 77px;
+  }
 }

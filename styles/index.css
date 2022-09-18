@@ -1,2 +1,16 @@
 @import 'normalize.css';
+@import 'fonts.css';
 @import 'default.css';
+
+@import 'components/navigation.css';
+@import 'components/country.css';
+@import 'components/timer.css';
+@import 'components/product.css';
+@import 'components/modal.css';
+@import 'components/form.css';
+
+@import 'components/header.css';
+@import 'components/hero.css';
+@import 'components/goods.css';
+@import 'components/features.css';
+@import 'components/footer.css';

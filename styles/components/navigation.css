@@ -1,0 +1,36 @@
+.navigation__list {
+  display: flex;
+  gap: 20px 50px;
+}
+
+.navigation__link {
+  transition: color 0.3s ease-in-out;
+}
+
+.navigation__link:hover {
+  color: var(--color-hover);
+}
+
+.navigation__link:focus {
+  color: var(--color-focus);
+}
+
+.navigation__link:active {
+  color: var(--color-active);
+}
+
+.navigation__list--column-mob {
+  flex-direction: column;
+}
+
+@media (min-width: 560px) {
+  .navigation__list--column-mob {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navigation__list {
+    gap: 84px;
+  }
+}
