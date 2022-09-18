@@ -95,7 +95,7 @@ const showPrice = (currency = 'USD') => {
 };
 
 const myHeaders = new Headers();
-myHeaders.append("apikey", "zZu3nnzCgY2YaPiMeYPZDIw5sUI6n3g90");
+myHeaders.append("apikey", "zZu3nnzCgY2YaPiMeYPZDIw5sUI6n3g9");
 
 const requestOptions = {
   method: 'GET',
